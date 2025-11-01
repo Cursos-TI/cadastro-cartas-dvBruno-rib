@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
   // Definindo as variáveis para armazenar as propriedades das cidades
 
@@ -24,6 +20,8 @@ int main() {
   float area2;
   float pib2;
   int numeros_pontos_turisticos2;
+
+
 
 
   printf("===== Cadastro de Cartas =====\n\n");
@@ -57,6 +55,11 @@ int main() {
   printf("Primeira carta criada com SUCESSO!\n\n");
 
 
+  
+  //Calculando a densidade populacional e PIB per capital da carta 1
+  float densidade_populacional = (float) populacao / area;
+  float pib_per_capital = (float) pib/populacao;
+
 
   //Entrada de Dados da segunda carta
   printf("Digite a letra do estado: ");
@@ -84,6 +87,10 @@ int main() {
   printf("Segunda carta criada com SUCESSO!\n\n");
   
 
+  //Calculando a densidade populacional e PIB per capital da carta 2
+  float densidade_populacional2 = (float) populacao2 / area2;
+  float pib_per_capital2 = (float) pib2/populacao2;
+
   //Imprimindo cartas criadas
   printf("=== SUAS CARTAS CRIADAS ===\n\n");
 
@@ -95,7 +102,9 @@ int main() {
   printf("População: %d\n", populacao);
   printf("Área: %.2f km²\n", area);
   printf("PIB: %.2f bilhões de reais\n", pib);
-  printf("Números de Pontos Turísticos: %d\n\n", numeros_pontos_turisticos);
+  printf("Números de Pontos Turísticos: %d\n", numeros_pontos_turisticos);
+  printf("Densidade Populacional: %2.f hab/km² \n", densidade_populacional);
+  printf("PIB per capita: %.2f reais\n\n", pib_per_capital);
 
 
   //imprimindo carta 2
@@ -107,6 +116,8 @@ int main() {
   printf("Área: %.2f km²\n", area2);
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Números de Pontos Turísticos: %d\n", numeros_pontos_turisticos2);
+  printf("Densidade Populacional: %2.f hab/km²\n", densidade_populacional2);
+  printf("PIB per capita: %.2f reais\n", pib_per_capital2);
 
   printf("\n\n");
 
